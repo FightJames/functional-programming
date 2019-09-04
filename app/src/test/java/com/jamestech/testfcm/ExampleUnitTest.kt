@@ -68,4 +68,23 @@ class ExampleUnitTest {
     }
 
     fun <T> getPostTitle(input: T) = input
+
+
+    @Test
+    fun testPro() {
+        var test = Pro()
+        println(test.k)
+        test.threadHold = 0
+        println(test.k)
+    }
+
+    class Pro {
+         val k: Int
+            get() = cal()
+        var threadHold = 10
+
+        fun cal(): Int {
+            return threadHold + 10;
+        }
+    }
 }

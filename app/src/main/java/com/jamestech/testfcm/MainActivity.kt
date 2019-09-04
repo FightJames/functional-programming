@@ -12,14 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (task.isSuccessful.not()) {
-                    Timber.d("getFCMInstance fail ${task.exception}")
-                    return@OnCompleteListener
-                }
-                var token = task.result?.token
-                Timber.d("token $token")
-            })
+//        FirebaseInstanceId.getInstance().instanceId
+//            .addOnCompleteListener(OnCompleteListener { task ->
+//                if (task.isSuccessful.not()) {
+//                    Timber.d("getFCMInstance fail ${task.exception}")
+//                    return@OnCompleteListener
+//                }
+//                var token = task.result?.token
+//                Timber.d("token $token")
+//            })
     }
 }
